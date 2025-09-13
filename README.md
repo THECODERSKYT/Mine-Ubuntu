@@ -4,7 +4,7 @@
 ---
 
 ## 🌟 About Project
-**Mine-Ubuntu** is a simple but powerful project made by **Sunny** to help beginners run a **Minecraft PaperMC server** directly on Ubuntu/Debian without any complex setup.  
+**Mine-Ubuntu** is a simple but powerful project made by **THECODERSKYT_AKA_SUNNYKUMAR** to help beginners run a **Minecraft PaperMC server** directly on Ubuntu/Debian without any complex setup.  
 
 ✔️ Beginner-friendly  
 ✔️ Auto download PaperMC server jar  
