@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mine-Ubuntu Setup Script (With RAM Prompt)
+# Mine-Ubuntu Setup Script (With RAM Prompt + Global Install)
 
 echo "========================================"
 echo "        Mine-Ubuntu Setup Wizard         "
@@ -35,16 +35,27 @@ fi
 # Auto accept EULA
 echo "eula=true" > eula.txt
 
-# Create start.sh with user RAM choice
+# Create local start.sh with user RAM choice
 cat > start.sh <<EOF
 #!/bin/bash
-cd "\$(dirname "\$0")"
+cd "$SERVER_DIR"
 java -Xms$RAM_MIN -Xmx$RAM_MAX -jar server.jar nogui
 EOF
 
 chmod +x start.sh
 
+# Install globally
+GLOBAL_SCRIPT="/usr/local/bin/start"
+
+sudo bash -c "cat > $GLOBAL_SCRIPT" <<EOF
+#!/bin/bash
+cd "$SERVER_DIR"
+java -Xms$RAM_MIN -Xmx$RAM_MAX -jar server.jar nogui
+EOF
+
+sudo chmod +x $GLOBAL_SCRIPT
+
 echo ""
 echo "✅ Setup completed!"
 echo "Server files are in: $SERVER_DIR"
-echo "Run your server with: $SERVER_DIR/start.sh"
+echo "Run your server globally with: start"
