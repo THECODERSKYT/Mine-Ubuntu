@@ -33,6 +33,4 @@
 - Java 17+ installed  
  ```bash
 sudo apt update && sudo apt install openjdk-17-jre openjdk-21-jdk -y
-
-```bash
-   bash <(wget -qO- https://raw.githubusercontent.com/THECODERSKYT/Mine-Ubuntu/refs/heads/main/setup.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/THECODERSKYT/Mine-Ubuntu/refs/heads/main/setup.sh)
